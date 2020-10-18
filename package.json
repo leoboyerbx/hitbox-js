@@ -1,0 +1,11 @@
+{
+  "name": "dom-collisions",
+  "version": "1.0.0",
+  "description": "A JS library to detect collisions between DOM Elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "leoboyerbx",
+  "license": "ISC"
+}
