@@ -1,7 +1,7 @@
 import Errors from "@/dom-collisions/Errors";
 import EventStack from "@/dom-collisions/EvenStack";
 
-export default class DomCollisions {
+export default class DomCollision {
     constructor (options) {
         this.events = new EventStack()
 
