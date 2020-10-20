@@ -4,8 +4,13 @@
   "description": "A JS library to detect collisions between DOM Elements",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --collectCoverage"
   },
   "author": "leoboyerbx",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.12.1",
+    "babel-jest": "^26.6.0",
+    "jest": "^26.5.3"
+  }
 }

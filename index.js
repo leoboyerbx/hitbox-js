@@ -1,4 +1,4 @@
-import DomCollision from "@/dom-collisions/DomCollision";
+import DomCollision from "./src";
 
 
 export default DomCollision
