@@ -3,20 +3,32 @@ import EventStack from "./EvenStack";
 import Collision from "@/dom-collisions/src/Collision";
 
 export default class DomCollision {
-    constructor (options) {
+    constructor ({elements, targetElements, watch = true, minOverlap = 0, onScreenOnly = false}) {
         this.events = new EventStack()
         this.previousCollisions = []
 
-        if (!options) Errors.noArgumentProvided()
-        if (!options.targets) Errors.targetNotProvided()
-        this.onScreenOnly = options.onScreenOnly !== false
-        this.targets = document.querySelectorAll(options.targets)
+        if (!elements) Errors.targetNotProvided()
+        this.targets = this.setUpTargets(elements)
+        if (targetElements) this.targetElements = this.setUpTargets(targetElements)
 
-        this.watching = false
+        this.watching = watch
+        this.minOverlap = minOverlap
+        this.onScreenOnly = onScreenOnly
+
         this.loop()
     }
 
+    setUpTargets (targets) {
+        if (targets instanceof NodeList || Array.isArray(targets)) {
+            return targets
+        }
+        if (typeof targets === 'string') {
+            return document.querySelectorAll(targets)
+        }
+    }
+
     loop () {
+
         this.compareEach(this.computeIntersection.bind(this))
         if (this.watching) window.requestAnimationFrame(this.loop.bind(this))
     }
@@ -34,6 +46,12 @@ export default class DomCollision {
         this.events.register(trigger, callback)
     }
 
+    onCollisionStart(callback) {
+        return this.on('collisionStart', callback)
+    }
+    onCollisionEnd(callback) {
+        return this.on('collisionEnd', callback)
+    }
     onCollision(callback) {
         return this.on('collision', callback)
     }
@@ -48,11 +66,13 @@ export default class DomCollision {
 
         if (h > 0 && w > 0) {
             const collision = new Collision({el1: el1, el2: el2, width: w, height: h, top: top, left: left})
-            if (!collision.alreadyIn(this.previousCollisions)) {
-                this.previousCollisions.push(collision)
-                this.events.call('collisionStart', [ collision ])
+            if (collision.overlap >= this.minOverlap) {
+                if (!collision.alreadyIn(this.previousCollisions)) {
+                    this.previousCollisions.push(collision)
+                    this.events.call('collisionStart', [ collision ])
+                }
+                this.events.call('collision', [ collision ])
             }
-            this.events.call('collision', [ collision ])
         } else {
             const virtualCollision = new Collision({el1: el1, el2: el2})
             const isPreviousCollision = virtualCollision.alreadyIn(this.previousCollisions)
@@ -64,13 +84,27 @@ export default class DomCollision {
     }
 
     compareEach (func) {
-        const targets = this.targets
-        for (let i = 0; i < targets.length; i++) {
-            for (let k = i + 1; k < targets.length; k++) {
-                if (targets[i] !== targets[k]) {
-                    func(targets[i], targets[k])
+        if (this.targetElements) {
+            this.targets.forEach(element => {
+                this.targetElements.forEach(target => {
+                    func(element, target)
+                })
+            })
+        } else {
+            const targets = this.targets
+            for (let i = 0; i < targets.length; i++) {
+                for (let k = i + 1; k < targets.length; k++) {
+                    if (targets[i] !== targets[k]) {
+                        func(targets[i], targets[k])
+                    }
                 }
             }
         }
+    }
+
+    static isOutOfViewPort (rect) {
+        return (
+            rect.bottom < 0
+        )
     }
 }

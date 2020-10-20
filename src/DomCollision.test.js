@@ -13,12 +13,12 @@ afterEach(() => {
 describe('Creation of the DomCollisionObject', () => {
 	test('Constructor gives an error if argument is not present', () => {
 		expect(() => {
-			new DomCollision()
+			new DomCollision({})
 		}).toThrow(Error)
 	})
 	test('Constructor gives an error if required options are not present', () => {
 		expect(() => {
-			new DomCollision({})
+			new DomCollision({targets: {}})
 		}).toThrow(Error)
 	})
 })
@@ -39,7 +39,9 @@ describe('Collision detection', () => {
 	document.body.append(rect1, rect2)
 	test ('Detects when there is a collision', done => {
 		const collision = new DomCollision({
-			targets: '.el'
+			targets: {
+				targets: '.el'
+			}
 		})
 		collision.onCollision(() => {
 			done()

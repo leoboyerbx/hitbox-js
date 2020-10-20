@@ -1,5 +1,7 @@
 export default class Collision {
     constructor({el1, el2, width, height, top, left}) {
+        this.element = el1
+        this.targetElement = el2
         this.elements = [el1, el2] || []
         this.elements.sort()
         this.area = width * height || 0
