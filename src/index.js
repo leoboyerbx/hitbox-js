@@ -1,4 +1,4 @@
-import DomCollision from "./DomCollision";
+import Hitbox from "./Hitbox";
 
 
-export default DomCollision
+export default Hitbox

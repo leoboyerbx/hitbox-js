@@ -1,4 +1,4 @@
-import DomCollision from "./DomCollision";
+import Hitbox from "./Hitbox";
 
 beforeEach(() => {
 	jest.spyOn(window, 'requestAnimationFrame').mockImplementation(cb => {
@@ -13,12 +13,12 @@ afterEach(() => {
 describe('Creation of the DomCollisionObject', () => {
 	test('Constructor gives an error if argument is not present', () => {
 		expect(() => {
-			new DomCollision({})
+			new Hitbox({})
 		}).toThrow(Error)
 	})
 	test('Constructor gives an error if required options are not present', () => {
 		expect(() => {
-			new DomCollision({targets: {}})
+			new Hitbox({targets: {}})
 		}).toThrow(Error)
 	})
 })
@@ -38,7 +38,7 @@ describe('Collision detection', () => {
 	rect2.style.heigth = '50px'
 	document.body.append(rect1, rect2)
 	test ('Detects when there is a collision', done => {
-		const collision = new DomCollision({
+		const collision = new Hitbox({
 			targets: {
 				targets: '.el'
 			}

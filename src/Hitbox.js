@@ -1,8 +1,8 @@
 import Errors from "./Errors";
 import EventStack from "./EvenStack";
-import Collision from "@/dom-collisions/src/Collision";
+import Collision from "@/hitbox-js/src/Collision";
 
-export default class DomCollision {
+export default class Hitbox {
     constructor ({ elements, targetElements, watch = true, minOverlap = 0, onScreenOnly = false, debug = false }) {
         this.events = new EventStack()
         this.previousCollisions = []
