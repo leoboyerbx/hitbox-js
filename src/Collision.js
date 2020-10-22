@@ -1,5 +1,5 @@
 export default class Collision {
-    constructor({el1, el2, width, height, top, left}) {
+    constructor({el1, el2, width, height, top, left, minRectArea}) {
         this.element = el1
         this.targetElement = el2
         this.elements = [el1, el2] || []
@@ -9,10 +9,6 @@ export default class Collision {
         this.height = height || 0
         this.top = top || 0
         this.left = left || 0
-
-        const r1 = el1.getBoundingClientRect()
-        const r2 = el2.getBoundingClientRect()
-        const minRectArea = Math.min(r1.width * r1.height, r2.width * r2.height) || 1
         this.overlap = this.area / minRectArea || 0
     }
 
