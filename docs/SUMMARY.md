@@ -5,7 +5,7 @@
 ## Getting started
 
 * [Installation](getting-started/installation.md)
-* [Basic example](getting-started/basic-example-1.md)
+* [Quickstart](getting-started/basic-example-1.md)
 
 ## Standard usage
 
