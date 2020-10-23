@@ -1,12 +1,11 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Basic example](basic-example.md)
 
 ## Getting started
 
 * [Installation](getting-started/installation.md)
-* [Basic example](getting-started/basic-example.md)
+* [Basic example](getting-started/basic-example-1.md)
 
 ## Standard usage
 

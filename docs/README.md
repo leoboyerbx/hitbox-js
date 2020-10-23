@@ -18,3 +18,5 @@ HitboxJS watches your elements and fires an event when **two elements** collide.
 
 If you want to give it a try you can first install the library.
 
+
+
