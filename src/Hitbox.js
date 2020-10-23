@@ -20,11 +20,14 @@ export default class Hitbox {
     }
 
     setUpTargets (targets) {
-        if (targets instanceof NodeList || Array.isArray(targets)) {
+        if (targets instanceof NodeList) {
             return targets
-        }
-        if (typeof targets === 'string') {
+        } else if (typeof targets === 'string') {
             return document.querySelectorAll(targets)
+        } else if (targets instanceof Node) {
+            return [ targets ]
+        } else {
+            Errors.wrongTargetType(typeof targets)
         }
     }
 
