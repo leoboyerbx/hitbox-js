@@ -1,6 +1,6 @@
 import Errors from "./Errors";
 import EventStack from "./EvenStack";
-import Collision from "@/hitbox-js/src/Collision";
+import Collision from "./Collision";
 
 export default class Hitbox {
     constructor ({ elements, targetElements, watch = true, minOverlap = 0, onScreenOnly = false, debug = false }) {
@@ -33,8 +33,12 @@ export default class Hitbox {
 
     loop () {
         if (this.debug) this.cleanDebugRects()
-        this.compareEach(this.computeIntersection.bind(this))
+        this.computeEachIntersection()
         if (this.watching) window.requestAnimationFrame(this.loop.bind(this))
+    }
+
+    computeEachIntersection () {
+        this.compareEach(this.computeIntersection.bind(this))
     }
 
     watch () {
@@ -81,6 +85,7 @@ export default class Hitbox {
                 if (this.debug) {
                     this.drawDebugRectangle(collision)
                 }
+                return collision
             }
         } else {
             const virtualCollision = new Collision({el1: el1, el2: el2})
