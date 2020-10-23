@@ -3,17 +3,16 @@
 * [Introduction](README.md)
 * [Basic example](basic-example.md)
 
-## Basic usage <a id="usage"></a>
-
 ## Getting started
 
 * [Installation](getting-started/installation.md)
 * [Basic example](getting-started/basic-example.md)
 
-## Usage <a id="usage-1"></a>
+## Standard usage
 
-* [Watching collisions](usage-1/watching-collisions.md)
-* [Handling collisions](usage-1/handling-collisions.md)
+* [Watching collisions](standard-usage/watching-collisions.md)
+* [Handling collisions](standard-usage/handling-collisions.md)
+* [Debugging](standard-usage/debugging.md)
 
 ## Advanced usage
 
