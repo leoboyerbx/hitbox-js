@@ -96,7 +96,7 @@ const hitboxWatcher = new Hitbox({
 | :--- | :--- | :--- |
 | `boolean` | No | `false` |
 
-Enables [debugging mode](../advanced-usage/debug.md) if set to `true`.
+Enables [debugging mode](../advanced/debug.md) if set to `true`.
 
 {% tabs %}
 {% tab title="Example" %}
@@ -117,7 +117,7 @@ const hitboxWatcher = new Hitbox({
 
 Defines the minimum overlap value requred to fire an event. See the dedicated page.
 
-{% page-ref page="../advanced-usage/conditional-detection.md" %}
+{% page-ref page="../advanced/conditional-detection.md" %}
 
 #### `onScreenOnly`
 
@@ -250,7 +250,7 @@ hitboxWatcher.unwatch()
 | :--- | :--- | :--- |
 | `set` | `boolean` | **Yes** |
 
-Enables or disables the [debugging mode](../advanced-usage/debug.md) according to the `set` boolean value.
+Enables or disables the [debugging mode](../advanced/debug.md) according to the `set` boolean value.
 
 ```javascript
 const hitboxWatcher = new Hitbox({

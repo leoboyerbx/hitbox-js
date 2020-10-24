@@ -12,9 +12,9 @@
 * [The Hitbox object](api/hitbox-object.md)
 * [The Collision object](api/collision-object.md)
 
-## Advanced usage
+## Advanced usage <a id="advanced"></a>
 
-* [Debugging mode](advanced-usage/debug.md)
-* [Conditional detection](advanced-usage/conditional-detection.md)
-* [Limit to viewport](advanced-usage/limit-to-viewport.md)
+* [Debugging mode](advanced/debug.md)
+* [Conditional detection](advanced/conditional-detection.md)
+* [Limit to viewport](advanced/limit-to-viewport.md)
 
