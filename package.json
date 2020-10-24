@@ -4,7 +4,8 @@
   "description": "A JS library to detect collisions between DOM Elements",
   "main": "index.js",
   "scripts": {
-    "test": "jest --collectCoverage",
+    "test": "jest --collectCoverage --watch",
+    "test-ci": "jest",
     "build": "webpack"
   },
   "author": "leoboyerbx",
