@@ -23,7 +23,7 @@ If you have a non-rectangular object, like a circle or a rotated rectangle, its 
       <th style="text-align:left">
         <p></p>
         <p>
-          <img src="../.gitbook/assets/bounding3.png" alt/>
+          <img src="../.gitbook/assets/bounding3 (2).png" alt/>
         </p>
       </th>
     </tr>

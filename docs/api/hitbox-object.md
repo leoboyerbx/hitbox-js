@@ -115,7 +115,7 @@ const hitboxWatcher = new Hitbox({
 | :--- | :--- | :--- |
 | `number`between 0 and 1 | No | `0` |
 
-Defines the minimum overlap value requred to fire an event. See the dedicated page.
+Defines the minimum [`overlap`](collision-object.md#overlap) collision value required to fire an event. See the dedicated page.
 
 {% page-ref page="../advanced/conditional-detection.md" %}
 

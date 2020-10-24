@@ -38,6 +38,10 @@ If you provided the [`targetElements`](hitbox-object.md#targetelements) paramete
 
 A number between 0 and 1 representing the amount of overlap between the two elements \(0 is no collision and 1 is when an element  completely overlaps the other\)
 
+| ![](../.gitbook/assets/overlap0.png) | ![](../.gitbook/assets/overlap0.36.png) | ![](../.gitbook/assets/overlap1.png) |
+| :--- | :--- | :--- |
+| _`overlap = 0`_ | _`overlap = 0.36`_ | _`overlap = 1`_ |
+
 ### `top`
 
 | Type |
