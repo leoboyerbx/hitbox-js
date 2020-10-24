@@ -15,7 +15,7 @@ To import HitboxJS, simply place this tag before your script.
 
 Once this is done, you can start using Hitbox.
 
-{% page-ref page="basic-example-1.md" %}
+{% page-ref page="quickstart.md" %}
 
 ## With a module bundler
 

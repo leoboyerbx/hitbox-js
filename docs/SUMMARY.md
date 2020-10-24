@@ -5,16 +5,16 @@
 ## Getting started
 
 * [Installation](getting-started/installation.md)
-* [Quickstart](getting-started/basic-example-1.md)
+* [Quickstart](getting-started/quickstart.md)
 
-## Standard usage
+## API Documentation <a id="api"></a>
 
-* [Watching collisions](standard-usage/watching-collisions.md)
-* [Handling collisions](standard-usage/handling-collisions.md)
-* [Debugging](standard-usage/debugging.md)
+* [The Hitbox object](api/hitbox-object.md)
+* [The Collision object](api/collision-object.md)
 
-## Advanced usage
+## Advanced usage <a id="advanced"></a>
 
-* [Conditional detection](advanced-usage/conditional-detection.md)
-* [Limit to viewport](advanced-usage/limit-to-viewport.md)
+* [Debugging mode](advanced/debug.md)
+* [Conditional detection](advanced/conditional-detection.md)
+* [Limit to viewport](advanced/limit-to-viewport.md)
 
