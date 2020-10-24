@@ -7,33 +7,28 @@ If you have a non-rectangular object, like a circle or a rotated rectangle, its 
 <table>
   <thead>
     <tr>
-      <th style="text-align:left"></th>
-      <th style="text-align:left"></th>
-      <th style="text-align:left"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">
+      <th style="text-align:left">
         <p></p>
         <p>
           <img src="../.gitbook/assets/debug1.png" alt="Regular rectangles: the hitbox fits perfectly"
           />
         </p>
-      </td>
-      <td style="text-align:left">
+      </th>
+      <th style="text-align:left">
         <p></p>
         <p>
           <img src="../.gitbook/assets/debug2 (1).png" alt/>
         </p>
-      </td>
-      <td style="text-align:left">
+      </th>
+      <th style="text-align:left">
         <p></p>
         <p>
           <img src="../.gitbook/assets/bounding3.png" alt/>
         </p>
-      </td>
+      </th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td style="text-align:left"><em>Rectangle elements: the hitbox fits perfectly</em>
       </td>
