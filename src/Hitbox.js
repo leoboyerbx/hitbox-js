@@ -125,6 +125,7 @@ export default class Hitbox {
         debugRect.style.height = collision.height + 'px'
         debugRect.style.background = 'rgba(249,255,27,0.6)'
         debugRect.style.border = 'solid rgb(249,255,27) 1px'
+        debugRect.style.zIndex = '100000'
         debugRect.classList.add('hitbox-debug-rect')
         document.body.append(debugRect)
     }
