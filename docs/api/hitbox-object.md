@@ -77,7 +77,7 @@ const hitboxWatcher = new Hitbox({
 | :--- | :--- | :--- |
 | `boolean` | No | `true` |
 
- Determines if the watcher should start watching immediately. Default to `true` but if set to `false`, the watcher can be activated with the `.watch()` method.
+ Determines if the watcher should start watching immediately. Default to `true` but if set to `false`, the watcher can be activated _later_ with the [`.watch()`](hitbox-object.md#watch) method
 
 {% tabs %}
 {% tab title="Example" %}
