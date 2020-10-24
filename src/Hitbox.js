@@ -135,6 +135,7 @@ export default class Hitbox {
 
     setDebug (set) {
         this.debug = set
+        if (!set) this.cleanDebugRects()
     }
     //
     // static isOutOfViewPort (rect) {
