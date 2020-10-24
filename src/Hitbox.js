@@ -138,10 +138,4 @@ export default class Hitbox {
         this.debug = set
         if (!set) this.cleanDebugRects()
     }
-    //
-    // static isOutOfViewPort (rect) {
-    //     return (
-    //         rect.bottom < 0
-    //     )
-    // }
 }
