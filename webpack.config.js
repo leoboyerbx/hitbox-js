@@ -1,17 +1,26 @@
 const path = require('path');
 
-module.exports = [
-	'source-map'
-].map(devtool => ({
-	mode: 'development',
-	entry: './src/index.js',
+module.exports = {
+	entry: './src/webpackEntry.js',
+	mode: 'production',
+	module: {
+		rules: [
+			{
+				test: /\.m?js$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
+					options: {
+						presets: ['@babel/preset-env']
+					}
+				}
+			}
+		],
+	},
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'webpack-numbers.js',
-		library: 'DomCollision'
+		filename: 'hitbox.dist.js',
+		library: 'Hitbox',
+		libraryTarget: 'umd',
 	},
-	devtool,
-	optimization: {
-		runtimeChunk: true
-	}
-}));
+};

@@ -1,16 +1,20 @@
 {
-  "name": "dom-collisions",
-  "version": "1.0.0",
+  "name": "hitbox-js",
+  "version": "0.9.0",
   "description": "A JS library to detect collisions between DOM Elements",
   "main": "index.js",
   "scripts": {
-    "test": "jest --collectCoverage"
+    "test": "jest --collectCoverage",
+    "build": "webpack"
   },
   "author": "leoboyerbx",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "babel-jest": "^26.6.0",
-    "jest": "^26.5.3"
+    "babel-loader": "^8.1.0",
+    "jest": "^26.5.3",
+    "webpack": "^5.2.0"
   }
 }
