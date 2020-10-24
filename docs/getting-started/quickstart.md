@@ -2,6 +2,9 @@
 
 These examples are simple cases to quickly understand how to use HitboxJS.
 
+* [Detect any collision and add a custom class](quickstart.md#example-1-detect-any-collision-and-add-a-custom-class)
+* [Destroy an "enemy" with a "bullet"](quickstart.md#example-2-destroy-an-enemy-with-a-bullet)
+
 ## Example \#1: Detect any collision and add a custom class
 
 ### Structure
