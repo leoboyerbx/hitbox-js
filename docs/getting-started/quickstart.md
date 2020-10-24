@@ -88,7 +88,7 @@ hitboxWatcher.onCollision(function(collision) {
 })
 ```
 
-We can see that Hitbox calls a function with a `Collision` object in parameter. This object has many properties, but the most useful are:
+We can see that Hitbox calls a function with a `Collision` object in parameter. This object has [many properties](../api/collision-object.md), but the most useful are:
 
 | Property | Description |
 | :--- | :--- |
