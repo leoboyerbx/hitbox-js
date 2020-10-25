@@ -39,9 +39,9 @@ jobs:
         with:
           node-version: 12
       - name: Download a single artifact
-          uses: actions/download-artifact@v2
-          with:
-            name: dist
+        uses: actions/download-artifact@v2
+        with:
+          name: dist
       - name: Setup NPM key
         env:
           NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
