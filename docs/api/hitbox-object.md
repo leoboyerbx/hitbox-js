@@ -22,6 +22,10 @@ const hitboxWatcher = new Hitbox(options)
 
  The CSS selector or a NodeList of the elements you want to watch. Any collision between any of those elements will trigger a collision event.
 
+{% hint style="warning" %}
+If you need to _later_ add elements that will be taken in account for collisions detection, the type of this argument matter. See [Static vs dynamic targets](../advanced/static-vs-dynamic-targets.md).
+{% endhint %}
+
 {% tabs %}
 {% tab title="With CSS Selector" %}
 ```javascript
@@ -61,6 +65,10 @@ const hitboxWatcher = new Hitbox({
  The CSS selector or a NodeList of a second set of elements you want to watch.
 
 If provided, collision events will only fire when an element from `elements` hits an element from `targetElements`.
+
+{% hint style="warning" %}
+If you need to _later_ add elements that will be taken in account for collisions detection, the type of this argument matter. See [Static vs dynamic targets](../advanced/static-vs-dynamic-targets.md).
+{% endhint %}
 
 {% tabs %}
 {% tab title="Example" %}

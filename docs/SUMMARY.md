@@ -18,4 +18,5 @@
 * [Debugging mode](advanced/debug.md)
 * [Conditional detection](advanced/conditional-detection.md)
 * [Limit to viewport](advanced/limit-to-viewport.md)
+* [Static vs dynamic targets](advanced/static-vs-dynamic-targets.md)
 
