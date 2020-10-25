@@ -22,15 +22,15 @@ Once this is done, you can start using Hitbox.
 If you are using a module bundler like Webpack or Parcel, you need to add Hitbox as a dependency of your project.
 
 {% tabs %}
-{% tab title="Yarn" %}
-```text
-yarn add hitbox-js
-```
-{% endtab %}
-
 {% tab title="NPM" %}
 ```bash
 npm install --save hitbox-js
+```
+{% endtab %}
+
+{% tab title="Yarn" %}
+```text
+yarn add hitbox-js
 ```
 {% endtab %}
 {% endtabs %}
