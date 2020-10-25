@@ -130,29 +130,45 @@ hitboxWatcher.onCollisionStart(function (collision) {
 ```
 {% endtab %}
 
-{% tab title="Result preview" %}
-sdsds
+{% tab title="Preview" %}
+![](../.gitbook/assets/addclass.gif)
 {% endtab %}
 
 {% tab title="Codepen" %}
-
+{% embed url="https://codepen.io/leoboyerbx/pen/NWrpKjw" %}
 {% endtab %}
 {% endtabs %}
 
 This is good, but we want to remove the class when the collision end. We will use the `onCollisionEnd()` listener.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```javascript
 hitboxWatcher.onCollisionEnd( function (collision) {
     collision.element.classList.remove('colliding')
     collision.targetElement.classList.remove('colliding')
 })
 ```
+{% endtab %}
+
+{% tab title="Preview" %}
+![](../.gitbook/assets/addandremoveclass.gif)
+{% endtab %}
+
+{% tab title="Codepen" %}
+{% embed url="https://codepen.io/leoboyerbx/pen/LYZWPLY" %}
+{% endtab %}
+{% endtabs %}
 
 ## Example \#2: Destroy an "enemy" with a "bullet"
 
 Let's say we're building a game in which a certain type of element destroys another type of element when hitting them \(for example a bullet with an enemy\). We just want to know when a bullet hits an enemy and not when a bullet hits another bullet or when an enemy hits another enemy.
 
 {% tabs %}
+{% tab title="Preview" %}
+![](../.gitbook/assets/bulletinitial.gif)
+{% endtab %}
+
 {% tab title="HTML" %}
 ```markup
 <div class="enemy"></div>
@@ -190,8 +206,8 @@ Let's say we're building a game in which a certain type of element destroys anot
 ```
 {% endtab %}
 
-{% tab title="Result" %}
-result
+{% tab title="Codepen" %}
+{% embed url="https://codepen.io/leoboyerbx/pen/eYzvOEb" %}
 {% endtab %}
 {% endtabs %}
 
@@ -217,8 +233,12 @@ hitboxWatcher.onCollisionStart(function (collision) {
 ```
 {% endtab %}
 
-{% tab title="Result" %}
-Result
+{% tab title="Preview" %}
+![](../.gitbook/assets/bulletresult.gif)
+{% endtab %}
+
+{% tab title="Codepen" %}
+{% embed url="https://codepen.io/leoboyerbx/pen/VwjpZMe" %}
 {% endtab %}
 {% endtabs %}
 

@@ -7,7 +7,7 @@ First of all, you need to install HitboxJS in your project.
 To import HitboxJS, simply place this tag before your script.
 
 ```markup
-<script type="text/javascript" src="CDN"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/hitbox-js/dist/hitbox.dist.js"></script>
 
 <!-- Then you can import your script -->
 <script type="text/javascript" src="my.script.js"></script>
