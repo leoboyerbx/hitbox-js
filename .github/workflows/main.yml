@@ -47,4 +47,4 @@ jobs:
           NPM_REGISTRY_TOKEN: ${{ secrets.NPM_REGISTRY_TOKEN }}
         run: echo "$NPM_REGISTRY_TOKEN" >> .npmrc
       - run: npm ci
-      - run: npm run ci-publish || true
+      - run: npm publish || true
