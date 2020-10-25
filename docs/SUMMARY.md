@@ -1,11 +1,11 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Introduction to HitboxJS](README.md)
 
 ## Getting started
 
 * [Installation](getting-started/installation.md)
-* [Quickstart](getting-started/quickstart.md)
+* [Quickstart examples](getting-started/quickstart.md)
 * [Bounding boxes limitations](getting-started/bounding-boxes-limitations.md)
 
 ## API Documentation <a id="api"></a>

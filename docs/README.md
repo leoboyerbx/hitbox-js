@@ -2,7 +2,7 @@
 description: Javascript library to detect collisions between DOM Elements
 ---
 
-# Introduction
+# Introduction to HitboxJS
 
 ## What is HitboxJS ?
 

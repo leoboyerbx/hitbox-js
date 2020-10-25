@@ -1,4 +1,4 @@
-# Quickstart
+# Quickstart examples
 
 These examples are simple cases to quickly understand how to use HitboxJS.
 
@@ -86,6 +86,10 @@ const hitboxWatcher = new Hitbox({
 
 Hitbox is going to start watching at every `.rectangle` to detect collisions.
 
+{% hint style="info" %}
+`elements` can have other types, see [`elements`](../api/hitbox-object.md#elements) for more details.
+{% endhint %}
+
 ### Handling collisions
 
 We now need to define what is going to happen when a collision happens. We will use the `onCollision()` listener, to log to the console which elements are colliding.
@@ -96,7 +100,7 @@ hitboxWatcher.onCollision(function(collision) {
 })
 ```
 
-We can see that Hitbox calls a function with a `Collision` object in parameter. This object has [many properties](../api/collision-object.md), but the most useful are:
+We can see that Hitbox calls a function with a [`Collision`](../api/collision-object.md) object in parameter. This object has [many properties](../api/collision-object.md), but the most useful are:
 
 | Property | Description |
 | :--- | :--- |
@@ -109,7 +113,7 @@ This will log elements to the console _whenever a collision is happening_. This 
 
 ### Adding a class when a collision starts
 
-We can add a class to the colliding elements to highlight them, for example a class called `.current` defined like this:
+We can add a class to the colliding elements to highlight them, for example a class called `.colliding` defined like this:
 
 ```css
 .colliding {
@@ -162,7 +166,7 @@ hitboxWatcher.onCollisionEnd( function (collision) {
 
 ## Example \#2: Destroy an "enemy" with a "bullet"
 
-Let's say we're building a game in which a certain type of element destroys another type of element when hitting them \(for example a bullet with an enemy\). We just want to know when a bullet hits an enemy and not when a bullet hits another bullet or when an enemy hits another enemy.
+Let's say we're building a game in which a certain type of element destroys another type of element when hitting them \(for example a bullet with an enemy\). We just want to know when a bullet hits an enemy but not when two bullets or two enemies hit each other.
 
 {% tabs %}
 {% tab title="Preview" %}
@@ -220,7 +224,7 @@ const hitboxWatcher = new Hitbox({
 })
 ```
 
-This way, the collision events will only fire for collisions between a bullet and an enemy. When there will be a collision, the `element` will be the bullet, and the `targetElement` will be the enemy.
+This way, the collision events will only fire for collisions between a bullet and an enemy. When there will be a collision, the [`element`](../api/collision-object.md#element) will be the bullet, and the [`targetElement`](../api/collision-object.md#targetelement) will be the enemy.
 
 Then we can delete the enemy when he's hit by the bullet.
 
