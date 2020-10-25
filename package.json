@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --collectCoverage --watch",
     "test-ci": "jest",
-    "build": "webpack"
+    "build": "webpack",
+    "ci-publish": "ci-publish"
   },
   "author": "leoboyerbx",
   "license": "ISC",
