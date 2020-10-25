@@ -8,8 +8,12 @@ export default class Hitbox {
         this.previousCollisions = []
 
         if (!elements) Errors.targetNotProvided()
+
         this.targets = this.setUpTargets(elements)
         if (targetElements) this.targetElements = this.setUpTargets(targetElements)
+
+        this.dynamicTargets = typeof elements === 'string' ? elements : false
+        this.dynamicTargetElements = typeof targetElements === 'string' ? targetElements : false
 
         this.watching = watch
         this.minOverlap = minOverlap
@@ -33,8 +37,14 @@ export default class Hitbox {
 
     loop () {
         if (this.debug) this.cleanDebugRects()
+        this.updateDynamicTargets()
         this.computeEachIntersection()
         if (this.watching) window.requestAnimationFrame(this.loop.bind(this))
+    }
+
+    updateDynamicTargets () {
+        if (this.dynamicTargets) this.targets = document.querySelectorAll(this.dynamicTargets)
+        if (this.dynamicTargetElements) this.targetElements = document.querySelectorAll(this.dynamicTargetElements)
     }
 
     computeEachIntersection () {
