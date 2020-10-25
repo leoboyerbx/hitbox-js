@@ -1,6 +1,6 @@
+<h1 align="center">HitboxJS</h1>
 <p align="center">
-  <h1>HitboxJS</h1>
-  <p>Simple JavaScript library to detect collisions between DOM elements</p>
+  <span>Simple JavaScript library to detect collisions between DOM elements</span>
 </p>
 <p align="center">
   <a href="https://github.com/leoboyerbx/hitbox-js/actions?query=workflow%3ACI">
