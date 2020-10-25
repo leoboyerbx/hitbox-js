@@ -1,5 +1,9 @@
 # Conditional detection
 
+{% hint style="danger" %}
+Désolé, cette page n'est pas encore traduite en français. [Vous pouvez aider !](https://github.com/leoboyerbx/hitbox-js/blob/masterfr/docs/api/hitbox-object.md)
+{% endhint %}
+
 Sometimes you may want to detect only collisions in which there is an intersection between the 2 objects.
 
 For example, you want to trigger collision events only when the colliding objects overlap at least 50%. You can achieve this by using the [`minOverlap`](../api/hitbox-object.md#minoverlap) parameter of the Hitbox constructor.

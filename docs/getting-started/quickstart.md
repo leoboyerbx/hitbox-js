@@ -1,18 +1,20 @@
-# Quickstart
+# Exemples pour démarrer
 
-These examples are simple cases to quickly understand how to use HitboxJS.
 
-* [Detect any collision and add a custom class](quickstart.md#example-1-detect-any-collision-and-add-a-custom-class)
-* [Destroy an "enemy" with a "bullet"](quickstart.md#example-2-destroy-an-enemy-with-a-bullet)
 
-## Example \#1: Detect any collision and add a custom class
+**We can add a class to the colliding elements to highlight them, for example a class called `.current` defined like this:**Ces exemples sont des cas simples pour comprendre rapidement le fonctionnement de HitboxJS.
+
+* [Détecter n'importe quelle collision et ajouter une classe CSS](quickstart.md#exemple-1-detecter-nimporte-quelle-collision-et-ajouter-une-classe-css)
+* [Détruire un "ennemi" avec une "balle"](quickstart.md#exemple-2-detruire-un-ennemi-avec-une-balle)
+
+## Exemple \#1: Détecter n'importe quelle collision et ajouter une classe CSS
 
 ### Structure
 
-Let's say we have rectangles moving on the page, animated by CSS.
+Imaginons avoir des rectangles qui bougent sur une page, animés par CSS.
 
 {% tabs %}
-{% tab title="Preview" %}
+{% tab title="Aperçu" %}
 ![](../.gitbook/assets/captured%20%281%29.gif)
 {% endtab %}
 
@@ -74,9 +76,9 @@ Let's say we have rectangles moving on the page, animated by CSS.
 {% endtab %}
 {% endtabs %}
 
-### Watching for collisions
+### Observer les collisions
 
-We want to do an action whenever 2 `.rectangle`s are colliding. To start watching for collisions, we need to create a new instance of `Hitbox` with a CSS selector as `elements` parameter.
+Nous voulons effectuer une actions lorsque 2 `.rectangle`s sont en collisions. Pour commencer à observer les collisions, il faut créer une nouvelle instance de `Hitbox`\(que nous appellerons `hitboxWatcher`\), avec un sélecteur CSS comme paramètre `elements`.
 
 ```javascript
 const hitboxWatcher = new Hitbox({
@@ -84,11 +86,15 @@ const hitboxWatcher = new Hitbox({
 })
 ```
 
-Hitbox is going to start watching at every `.rectangle` to detect collisions.
+Hitbox va commencer à observer chaque `.rectangle` pour détecter les collisions.
 
-### Handling collisions
+{% hint style="info" %}
+`elements` peut être d'un type différent, voir [`elements`](../api/hitbox-object.md#elements) pour plus d'informations.
+{% endhint %}
 
-We now need to define what is going to happen when a collision happens. We will use the `onCollision()` listener, to log to the console which elements are colliding.
+### Traiter les collisions
+
+Maintenant, nous devons définir ce qui se passe lorsqu'une collision survient. Nous allons utiliser l'écouteur `onCollision()` pour logger dans la console quels éléments sont en collision.
 
 ```javascript
 hitboxWatcher.onCollision(function(collision) {
@@ -96,20 +102,20 @@ hitboxWatcher.onCollision(function(collision) {
 })
 ```
 
-We can see that Hitbox calls a function with a `Collision` object in parameter. This object has [many properties](../api/collision-object.md), but the most useful are:
+On observe que la fonction de renvoi est appelée avec un objet [`Collision`](../api/collision-object.md) en paramètre. Cet objet possède [plusieurs propriétés](../api/collision-object.md), mais les plus utiles sont:
 
-| Property | Description |
+| Propriété | Description |
 | :--- | :--- |
-| `element` | The first element in the collision |
+| `element` | Le premier élément en collision |
 | `targetElement` | The second element in the collision |
-| `elements` | Array containing `element` and `targetElement` |
-| `overlap` | A number between 0 and 1 representing the amount of overlap between the two elements \(0 is no collision and 1 is when an element  completely overlaps the other\) |
+| `elements` | Tableau contenant `element` et `targetElement` |
+| `overlap` | Un nombre entre 0 et 1 qui représente à quel point les deux éléments se superposent \(0 correspond à une absence totale de collision et 1 lorsqu'un élément recouvre totalement l'autre\). |
 
-This will log elements to the console _whenever a collision is happening_. This means that if two elements stay il collision for one second, there will be approximately 60 logs to the console.
+Cela va logger les éléments dans la console _à chaque fois qu'une collision sera en train d'avoir lieu_. Cela signifie que si deux éléments sont en collision durant une seconde, il y aura approximativement 60 logs dans la console.
 
-### Adding a class when a collision starts
+### Ajout d'une classe lors du début d'une collision
 
-We can add a class to the colliding elements to highlight them, for example a class called `.current` defined like this:
+Créons une classe qui mette en valeur les éléments lorsqu'ils sont en cours de collision, par exemple une classe `.colliding` définie de cette façon:
 
 ```css
 .colliding {
@@ -118,7 +124,7 @@ We can add a class to the colliding elements to highlight them, for example a cl
 }
 ```
 
-We don't need to add a class at every moment of the collision, we only need to add it when the collision starts. To do this, we can use the `onCollisionStart()` listener.
+Nous n'avons pas besoin d'ajouter une classe à chaque instant de la collision, nous avons seulement besoin de l'ajouter au commencement d'une collision. Pour cela, nous pouvons utiliser l'écouteur `onCollisionStart()`.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -130,7 +136,7 @@ hitboxWatcher.onCollisionStart(function (collision) {
 ```
 {% endtab %}
 
-{% tab title="Preview" %}
+{% tab title="Aperçu" %}
 ![](../.gitbook/assets/addclass.gif)
 {% endtab %}
 
@@ -139,7 +145,7 @@ hitboxWatcher.onCollisionStart(function (collision) {
 {% endtab %}
 {% endtabs %}
 
-This is good, but we want to remove the class when the collision end. We will use the `onCollisionEnd()` listener.
+C'est bien, mais on voudrait également retirer la classe lors de la fin de la collision. L'écouteur `onCollisionEnd()` permet ceci.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -151,7 +157,7 @@ hitboxWatcher.onCollisionEnd( function (collision) {
 ```
 {% endtab %}
 
-{% tab title="Preview" %}
+{% tab title="Aperçu" %}
 ![](../.gitbook/assets/addandremoveclass.gif)
 {% endtab %}
 
@@ -160,12 +166,12 @@ hitboxWatcher.onCollisionEnd( function (collision) {
 {% endtab %}
 {% endtabs %}
 
-## Example \#2: Destroy an "enemy" with a "bullet"
+## Exemple \#2: Détruire un "ennemi" avec une "balle"
 
-Let's say we're building a game in which a certain type of element destroys another type of element when hitting them \(for example a bullet with an enemy\). We just want to know when a bullet hits an enemy and not when a bullet hits another bullet or when an enemy hits another enemy.
+Imaginons créer un jeu dans lequel un certain type d'élément détruit un autre type d'élément en le percutant \(par exemple un projectile sur un ennemi\). Nous voulons savoir lorsqu'un projectile percute un ennemi, mais pas lorsque deux projectiles ou deux ennemis se heurtent entre eux.
 
 {% tabs %}
-{% tab title="Preview" %}
+{% tab title="Aperçu" %}
 ![](../.gitbook/assets/bulletinitial.gif)
 {% endtab %}
 
@@ -211,7 +217,7 @@ Let's say we're building a game in which a certain type of element destroys anot
 {% endtab %}
 {% endtabs %}
 
-We can achieve this goal by using another parameter when creating our `Hitbox` object.
+Pour cela, nous pouvons ajouter un autre paramètre lors de la création de notre objet `Hitbox`
 
 ```javascript
 const hitboxWatcher = new Hitbox({
@@ -220,9 +226,9 @@ const hitboxWatcher = new Hitbox({
 })
 ```
 
-This way, the collision events will only fire for collisions between a bullet and an enemy. When there will be a collision, the `element` will be the bullet, and the `targetElement` will be the enemy.
+De cette manière, les événement de collision se déclencheront uniquement pour des collisions entre projectile et ennemi. Lors d'une collision, la propriété `element` de l'objet collision sera le projectile, et le `targetElement` sera l'ennemi.
 
-Then we can delete the enemy when he's hit by the bullet.
+À partir de là, on peut supprimer l'ennemi lorsqu'il est percuté.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -244,9 +250,9 @@ hitboxWatcher.onCollisionStart(function (collision) {
 
 _Et voilà !_
 
-## To go further
+## Pour aller plus loin
 
-If you need more details on Hitbox API, you can read the full documentation.
+Si vous avez besoin de plus de détails sur l'API de HitboxJS, vous pouvez lire la documentation complète.
 
 
 

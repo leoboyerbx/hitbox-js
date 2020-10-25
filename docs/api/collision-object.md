@@ -1,5 +1,9 @@
 # The Collision object
 
+{% hint style="danger" %}
+Désolé, cette page n'est pas encore traduite en français. [Vous pouvez aider !](https://github.com/leoboyerbx/hitbox-js/blob/masterfr/docs/api/hitbox-object.md)
+{% endhint %}
+
 When Hitbox detects a collision between two elements, it calls the user-defined functions, giving them a `Collision` object as parameter. This object has many useful properties
 
 ### `elements`

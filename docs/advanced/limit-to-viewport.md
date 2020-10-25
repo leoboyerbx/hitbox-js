@@ -1,7 +1,7 @@
-# Limit to viewport
+# Limiter à la vue
 
 {% hint style="info" %}
-This feature is still under development. stay tuned ! ☺️
+ Cette fonctionnalité est encore en développement. _Stay tuned ! ☺️_
 {% endhint %}
 
 

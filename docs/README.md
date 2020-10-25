@@ -1,22 +1,24 @@
 ---
-description: Javascript library to detect collisions between DOM Elements
+description: >-
+  Bibliothèque JavaScript pour détecter les collisions et intersections entre
+  éléments du DOM
 ---
 
-# Introduction
+# Introduction à HitboxJS
 
-## What is HitboxJS ?
+## Qu'est-ce qu'HitboxJS ?
 
-HitboxJS is a JS library that can help you detect collisions or intersections between **elements in your DOM**.
+HitboxJS est une bibliothèque  JS qui a pour but d'aider à détecter les collisions ou les intersections entre **les élements du DOM**.
 
-It can be used if your are building complex interfaces with, for example, rectangle selection, or if you're building a game\*.
+Hitbox peut être utilisée si vous créez des interfaces complexes avec, par exemple, un rectangle de sélection, ou encore si vous créez un jeu\*.
 
 {% hint style="warning" %}
-\*If you are building a game, you are probably using a canvas so this library is not for you \(and if not, maybe you should consider switching to canvas [for performance reasons](https://stackoverflow.com/questions/38901951/canvas-vs-svg-for-games)\). HitboxJS only detects collisions and intersection **between DOM Elements**.
+\*Si vous codez un jeu, vous utilisez probablement un canvas \(et si ce n'est pas le cas, vous pourriez vouloir en utiliser un [pour des raisons de performance](https://stackoverflow.com/questions/38901951/canvas-vs-svg-for-games)\). Dans ce cas, cette bibliothèque n'est pas pour vous. HitboxJS détecte des collisions **entre éléments du DOM** uniquement.
 {% endhint %}
 
-HitboxJS watches your elements and fires an event when **two elements** collide.
+Hitbox surveille vos éléments et déclenche un événement lorsque **deux éléments** sont en collision.
 
-If you want to give it a try you can first install the library.
+SI vous voulez essayer Hitbox, vous pouvez commencer par l'installer dans votre projet.
 
 
 

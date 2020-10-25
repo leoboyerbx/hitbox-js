@@ -4,6 +4,10 @@ description: A good to know limitation
 
 # Bounding boxes limitations
 
+{% hint style="danger" %}
+Désolé, cette page n'est pas encore traduite en français. [Vous pouvez aider !](https://github.com/leoboyerbx/hitbox-js/blob/masterfr/docs/api/hitbox-object.md)
+{% endhint %}
+
 HitboxJS uses the Bounding box system to handle collisions. This means that each element is considered as an horizontal rectangle.
 
 If you have a non-rectangular object, like a circle or a rotated rectangle, its collisions will be detected by **a rectangle bounding the element**, the _hitbox**.**_

@@ -1,11 +1,11 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [Introduction à HitboxJS](README.md)
 
-## Getting started
+## Commencer <a id="getting-started"></a>
 
 * [Installation](getting-started/installation.md)
-* [Quickstart](getting-started/quickstart.md)
+* [Exemples pour démarrer](getting-started/quickstart.md)
 * [Bounding boxes limitations](getting-started/bounding-boxes-limitations.md)
 
 ## API Documentation <a id="api"></a>
@@ -17,6 +17,6 @@
 
 * [Debugging mode](advanced/debug.md)
 * [Conditional detection](advanced/conditional-detection.md)
-* [Limit to viewport](advanced/limit-to-viewport.md)
+* [Limiter à la vue](advanced/limit-to-viewport.md)
 * [Static vs dynamic targets](advanced/static-vs-dynamic-targets.md)
 

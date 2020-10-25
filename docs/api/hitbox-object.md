@@ -1,5 +1,9 @@
 # The Hitbox object
 
+{% hint style="danger" %}
+Désolé, cette page n'est pas encore traduite en français. [Vous pouvez aider !](https://github.com/leoboyerbx/hitbox-js/blob/masterfr/docs/api/hitbox-object.md)
+{% endhint %}
+
 ## Hitbox constructor
 
 ![](../.gitbook/assets/debug.gif)

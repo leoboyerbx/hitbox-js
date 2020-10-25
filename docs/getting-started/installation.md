@@ -1,25 +1,25 @@
 # Installation
 
-First of all, you need to install HitboxJS in your project.
+Pour utiliser HitboxJS, il vous faut l'installer dans votre projet.
 
-## In the browser
+## Dans le navigateur
 
-To import HitboxJS, simply place this tag before your script.
+Pour importer HitboxJS, placez simplement cette balise avant d'importer votre script.
 
 ```markup
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/hitbox-js/dist/hitbox.dist.js"></script>
 
-<!-- Then you can import your script -->
+<!-- Ensuite vous pouvez importer votre script -->
 <script type="text/javascript" src="my.script.js"></script>
 ```
 
-Once this is done, you can start using Hitbox.
+Une fois cette étape accomplie, vous pouvez démarrer.
 
 {% page-ref page="quickstart.md" %}
 
-## With a module bundler
+## Avec un _module bundler_
 
-If you are using a module bundler like Webpack or Parcel, you need to add Hitbox as a dependency of your project.
+Si vous utilisez un empaqueteur d'application \(_module bundler_\) comme Webpack ou Parcel, vous devez ajouter Hitbox en tant que dépendance de votre projet.
 
 {% tabs %}
 {% tab title="NPM" %}
@@ -35,11 +35,11 @@ yarn add hitbox-js
 {% endtab %}
 {% endtabs %}
 
-Then you need to import it in your JS file
+Ensuite, vous pouvez importer Hitbox dans votre application.
 
 ```javascript
 import Hitbox from 'hitbox-js'
 ```
 
-And your are ready to go !
+Et vous être prêt pour démarrer
 

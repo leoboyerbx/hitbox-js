@@ -1,5 +1,9 @@
 # Debugging mode
 
+{% hint style="danger" %}
+Désolé, cette page n'est pas encore traduite en français. [Vous pouvez aider !](https://github.com/leoboyerbx/hitbox-js/blob/masterfr/docs/api/hitbox-object.md)
+{% endhint %}
+
 HitboxJS provides a very handy debugging mode to help you see the collisions. It highlights the current collisions in the DOM.
 
 <table>
