@@ -1,6 +1,6 @@
 {
   "name": "hitbox-js",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "A JS library to detect collisions between DOM Elements",
   "main": "index.js",
   "scripts": {
