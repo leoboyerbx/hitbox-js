@@ -3,12 +3,15 @@
   <a href="https://github.com/leoboyerbx/hitbox-js/actions?query=workflow%3ACI">
     <img src="https://github.com/leoboyerbx/hitbox-js/workflows/CI/badge.svg" />
   </a>
+  <a href="https://badge.fury.io/js/hitbox-js">
+    <img src="https://badge.fury.io/js/hitbox-js.svg" alt="NPM Package" />
+  </a>
 </p>
 <p align="center">
   <span>Simple JavaScript library to detect collisions between DOM elements</span>
 </p>
 <p align="center">
-    <img src="./docs/.gitbook/assets/debug.gif?raw=true" />
+    <img src="https://raw.githubusercontent.com/leoboyerbx/hitbox-js/master/docs/.gitbook/assets/debug.gif" />
 
 ## What is HitboxJS ?
 
