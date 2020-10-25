@@ -12,6 +12,10 @@ These examples are simple cases to quickly understand how to use HitboxJS.
 Let's say we have rectangles moving on the page, animated by CSS.
 
 {% tabs %}
+{% tab title="Preview" %}
+![](../.gitbook/assets/captured%20%281%29.gif)
+{% endtab %}
+
 {% tab title="HTML" %}
 ```markup
 <div class="rectangle r1"></div>
@@ -63,6 +67,10 @@ Let's say we have rectangles moving on the page, animated by CSS.
   to { transform: translate(250px, 250px); }
 }
 ```
+{% endtab %}
+
+{% tab title="Codepen" %}
+{% embed url="https://codepen.io/leoboyerbx/pen/NWrdeop" %}
 {% endtab %}
 {% endtabs %}
 
@@ -122,8 +130,12 @@ hitboxWatcher.onCollisionStart(function (collision) {
 ```
 {% endtab %}
 
-{% tab title="Result" %}
+{% tab title="Result preview" %}
 sdsds
+{% endtab %}
+
+{% tab title="Codepen" %}
+
 {% endtab %}
 {% endtabs %}
 
