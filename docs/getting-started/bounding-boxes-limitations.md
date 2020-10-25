@@ -1,3 +1,7 @@
+---
+description: A good to know limitation
+---
+
 # Bounding boxes limitations
 
 HitboxJS uses the Bounding box system to handle collisions. This means that each element is considered as an horizontal rectangle.
