@@ -2,6 +2,8 @@
 
 ## Hitbox constructor
 
+![](../.gitbook/assets/debug.gif)
+
 The detection of the collisions begins by creating an object that will watch the DOM.
 
 ```javascript

@@ -22,6 +22,8 @@ HitboxJS provides a very handy debugging mode to help you see the collisions. It
   <tbody></tbody>
 </table>
 
+![](../.gitbook/assets/debug.gif)
+
 You can enable the debugging mode by setting the `debug` parameter to true when creating your watcher.
 
 ```javascript
