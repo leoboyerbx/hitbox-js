@@ -27,7 +27,7 @@ It can be used if your are building complex interfaces with, for example, rectan
 
 HitboxJS watches your elements and fires an event when **two elements** collide.
 
-Learn to use HitboxJS by reading [the documentation](https://docs.hitbox.cf/).
+Learn to use HitboxJS by reading [the documentation](https://leoboyerbx.gitbook.io/hitbox-js/).
 
 
 
